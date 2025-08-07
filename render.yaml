@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: dash-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:server
+    plan: free
+    build:
+      pythonVersion: 3.11.9
