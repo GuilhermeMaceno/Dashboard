@@ -128,15 +128,15 @@ app.layout = dbc.Container(
                             )
                         ])
                     ],
-                    width = 9
+                    width = 9, xl = 9, xs = 12, sm = 12, md = 12, lg =12
                         ),
                 dbc.Col(
                     [
                         tabs_ML,
                         botao,
-                        dataset_col
                     ],
-                    width = 3
+                    width = 3, xs = 12, sm=12, md=12, lg=3, xl=3,
+                    style = {'marginBottom': '40px'}
 
                 )
             ]
@@ -149,21 +149,26 @@ app.layout = dbc.Container(
                                         'marginBottom': '20px',
                                         'font-weight': 'bold',
                                         'font-family': 'Helvetica, sans-serif',
-                                        'font-size': '20px',
-                                        'padding': '3px',
-                                        'marginLeft': '2px'}),
+                                        'font-size': '20px'
+                                        }),
                         markdown_modelos,
                         drop_graficos,
                         tabs_modelos
                     ],
-                    width = 9,
-                    style={'marginLeft': '30px'}
+                    width = 5, xs= 12, sm=12, md=12, lg=9, xl=9,
+                    #style={'marginLeft': '1%'}
                 ),
+                    dbc.Col([dataset],
+                        width = 5, xs= 12, sm=12, md=12, lg=3, xl=3,
+                        style={'textAlign': 'left', 
+                                            'marginBottom': '20px',
+                                            #'marginRight': '2%'
+                                })
             ]
-        )
+                )
             ],
-    fluid=True,
-        )
+        fluid=True
+    )
     
            
 

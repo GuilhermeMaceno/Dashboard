@@ -19,7 +19,7 @@ dataset = dbc.Card([
                  
                  ''',
                  style = {
-                     'padding': '5px',
+                     #'padding': '5px',
                      'margin-top': '10px',
                          }
     )
@@ -32,6 +32,7 @@ dataset = dbc.Card([
         'border-radius': '0.25rem',
         'background-color': "#ffffff",
         })
+
 
 drop_graficos = dcc.Dropdown(id = 'menu1',
             options=
@@ -79,6 +80,7 @@ tabs_modelos = html.Div([
         dbc.Tab(
             [dcc.Markdown(
                 '''
+                
                 Parâmetros do SVM:
                 - **Kernel**: linear, polynomial, radial basis function (RBF)
                 - **C**: Regularization parameter
@@ -93,6 +95,7 @@ tabs_modelos = html.Div([
 
         dbc.Tab(
             [dcc.Markdown('''
+                          
                 Parâmetros do Random Forest:
                 
                 - **n_estimators**: Number of trees in the forest
