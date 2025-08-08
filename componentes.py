@@ -37,11 +37,10 @@ drop_graficos = dcc.Dropdown(id = 'menu1',
             options=
             [
             {'label': 'ROC Curve', 'value': 'ROC Curve'},
-            {'label': 'Precision Curve', 'value': 'Precision Curve'},
-            {'label': 'Histograma', 'value': 'Histograma'},
+            {'label': 'Precision Curve', 'value': 'Precision Curve'}
             ],
             value='ROC Curve',
-            style={'width': '96%', 'marginTop': '1px'})
+            style={'width': '95%', 'marginTop': '1px'})
 
 dataset_col = dbc.Collapse(
             dataset,
@@ -59,18 +58,20 @@ markdown_modelos = dcc.Dropdown(
         {'label': 'SVM', 'value': 'SVM'},
         {'label': 'Random Forest', 'value': 'Random Forest'},
         ],
-        value='SVM'
+        value='SVM',
+        style={'width': '95%', 'marginTop': '1px'}
 )
 
-botao = dbc.Button('Graficar', 
+botao = dbc.Button('Ok', 
                    color = 'primary', 
-                   className = 'me-1',
+                   className = "me-md-2",
                    n_clicks = 0,
                    id = 'botao_graficar',
                    style = {'marginTop': '20px', 'width': '30%',
                             'color': 'light'
                             },
                    outline = True,
+                   size = 'small',
                    )
 
 tabs_modelos = html.Div([
@@ -114,11 +115,11 @@ tab_svm = dbc.Tab(
         id = 'SVM kernel parâmetros',
         options=
             [
-            {'label': 'Kernel Radial', 'value': 'Radial'},
-            {'label': 'Kernel Linear', 'value': 'Linear'},
-            {'label': 'Kernel Polynomial', 'value': 'Polynomial'},      
+            {'label': 'Kernel Radial', 'value': 'rbf'},
+            {'label': 'Kernel Linear', 'value': 'linear'},
+            {'label': 'Kernel Polynomial', 'value': 'Poly'},      
             ],
-            value='Linear',
+            value='linear',
             placeholder='Select SVM Parameter'
                 ),
 
@@ -172,14 +173,13 @@ tab_random_forest = dbc.Tab(
 
 tabs_ML = html.Div(
     [
-    html.H2('Modelos de Machine Learning', style={'textAlign': 'center', 
+    html.H2('Parâmetros dos Modelos', style={'textAlign': 'left', 
                                                   'marginBottom': '20px',
                                                   'font-weight': 'bold',
                                                   'font-family': 'Helvetica, sans-serif',
                                                   'font-size': '20px',
                                                   'padding': '3px',
                                                   'marginLeft': '2px'}),
-    markdown_modelos,
 dbc.Tabs(
     [
         tab_svm,
