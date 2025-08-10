@@ -1,0 +1,86 @@
+.Select-control {
+    background-color: solid #212121 !important; /* cor do box */
+    border: 1px solid #6D6B6B !important;  /* borda */
+    border-radius: 5px !important;
+}
+
+.Select-option{
+    background-color: #555 !important;
+}
+
+/* Texto selecionado */
+.Select-value-label {
+    color: rgb(210, 207, 207) !important;
+    font-size: 13px;
+}
+
+/* Placeholder do Dropdown */
+.Select__placeholder {
+    color: rgb(34, 21, 21) !important;
+}
+
+/* Opções na lista */
+.Select__option {
+    color: white !important;          /* Texto */
+    background-color: #212121 !important; /* Fundo padrão */
+}
+
+
+/* Opção em hover/foco */
+.Select__option--is-focused {
+    background-color: #666 !important;
+    color: rgb(137, 21, 21) !important;
+}
+
+
+.Select, .Select-control {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Aba normal */
+.nav-link {
+    background-color: #212121 !important;
+    color: white !important;
+}
+
+/* Aba ativa */
+.nav-link.active {
+    background-color: #6f4b4b !important;
+    color: white !important;
+    border : 0px solid white
+}
+
+/* Aplica para todos os gráficos */
+.dash-graph {
+    border: 2px;
+    border-radius: 5px;     /* cantos arredondados (opcional) */
+}
+
+/* Remove completamente a borda padrão dos dropdowns */
+.Select-control {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: #1f1f1f !important; /* cor de fundo do box */
+}
+
+/* Remove borda quando focado ou aberto */
+.is-focused > .Select-control,
+.is-open > .Select-control {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove highlight do input interno */
+.Select-input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+
+
